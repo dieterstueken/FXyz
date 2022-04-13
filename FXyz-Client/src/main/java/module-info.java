@@ -37,7 +37,8 @@ module org.fxyz3d.client {
     opens org.fxyz3d.client to javafx.fxml;
     
     uses org.fxyz3d.FXyzSamplerProject;
-    
+    uses org.fxyz3d.FXyzSample;
+
     exports org.fxyz3d;
     exports org.fxyz3d.client;
     exports org.fxyz3d.model;

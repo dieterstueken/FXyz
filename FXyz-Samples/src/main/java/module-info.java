@@ -44,11 +44,41 @@ module org.fxyz3d.samples {
 
     opens org.fxyz3d.controls to javafx.fxml;
     provides org.fxyz3d.FXyzSamplerProject with org.fxyz3d.samples.FXyzProject;
-    
-    exports org.fxyz3d.samples.importers to org.fxyz3d.client, org.fxyz3d.importers;
-    exports org.fxyz3d.samples.shapes.compound to org.fxyz3d.client;
-    exports org.fxyz3d.samples.shapes.texturedmeshes to org.fxyz3d.client;
-    exports org.fxyz3d.samples.utilities to org.fxyz3d.client;
+    provides org.fxyz3d.FXyzSample with
+            org.fxyz3d.samples.importers.ImportMaya,
+            org.fxyz3d.samples.importers.ImportOBJ,
+            org.fxyz3d.samples.shapes.compound.Histograms,
+            org.fxyz3d.samples.shapes.compound.PolyLines3D,
+            org.fxyz3d.samples.shapes.compound.ScatterPlotColors,
+            org.fxyz3d.samples.shapes.compound.ScatterPlotMeshes,
+            org.fxyz3d.samples.shapes.texturedmeshes.BezierMeshes,
+            org.fxyz3d.samples.shapes.texturedmeshes.Capsule,
+            org.fxyz3d.samples.shapes.texturedmeshes.Cones,
+            org.fxyz3d.samples.shapes.texturedmeshes.Cuboids,
+            org.fxyz3d.samples.shapes.texturedmeshes.CurvedSpring,
+            org.fxyz3d.samples.shapes.texturedmeshes.Frustum,
+            org.fxyz3d.samples.shapes.texturedmeshes.Icosahedron,
+            org.fxyz3d.samples.shapes.texturedmeshes.Knots,
+            org.fxyz3d.samples.shapes.texturedmeshes.Prisms,
+            org.fxyz3d.samples.shapes.texturedmeshes.RandomSegmentedDomes,
+            org.fxyz3d.samples.shapes.texturedmeshes.SegmentedDome,
+            org.fxyz3d.samples.shapes.texturedmeshes.SegmentedSphere,
+            org.fxyz3d.samples.shapes.texturedmeshes.SegmentedTorus,
+            org.fxyz3d.samples.shapes.texturedmeshes.Springs,
+            org.fxyz3d.samples.shapes.texturedmeshes.Surface3D,
+            org.fxyz3d.samples.shapes.texturedmeshes.SurfacePlot,
+            org.fxyz3d.samples.shapes.texturedmeshes.Tetrahedra,
+            org.fxyz3d.samples.shapes.texturedmeshes.Text3D,
+            org.fxyz3d.samples.utilities.Billboarding,
+            org.fxyz3d.samples.utilities.FloatingLabels,
+            org.fxyz3d.samples.utilities.RayIntersections,
+            org.fxyz3d.samples.utilities.RayShooting,
+            org.fxyz3d.samples.utilities.SkyBoxing;
+
+    exports org.fxyz3d.samples.importers to org.fxyz3d.client, org.fxyz3d.importers, javafx.graphics;
+    exports org.fxyz3d.samples.shapes.compound to org.fxyz3d.client, javafx.graphics;
+    exports org.fxyz3d.samples.shapes.texturedmeshes to org.fxyz3d.client, javafx.graphics;
+    exports org.fxyz3d.samples.utilities to org.fxyz3d.client, javafx.graphics;
     exports org.fxyz3d.samples;
     
 }
